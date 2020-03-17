@@ -1,2 +1,8 @@
 # mge55101-20195171
-Hello, deep learning :D
+
+```
+Name: Kwanglo Lee
+Student No: 20195171
+School: Human Factors Engineering
+E-mail: kwanglo@unist.ac.kr
+```
