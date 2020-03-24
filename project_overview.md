@@ -1,3 +1,5 @@
+*Note: This document is not complete! --2020/03/24 19:49*
+
 # Project Objective
 ```
 Classification of psychiatric features in daily dialog settings
