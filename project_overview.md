@@ -1,49 +1,65 @@
-*Note: This document is not complete! --2020/03/24 19:49*
+*Note: This document is still on-going! Last update --2020/03/24 22:30*
 
 # Project Objective
-```
-Classification of psychiatric features in daily dialog settings
-```
+
+Detecting/Classifying psychiatric features in daily dialog settings
+
+## Project Description
+
+Primary research tool in psychology and psychiatry researches are quantitative methods like questionnaires.
+Still, qualitative research is essential when studying psychological or psychiatric features. Unfortunately, qualitative research requires great amount of time and resources in its process and analysis. Especially in counseling, although initial criteria is set according to first visit questionnaire, qualitative analysis based on counseling results holds the most critical portion.
+
+As the advance of NLP technology, multi-sentiment analysis from daily dialog became possible. If so, what if we can derive psychiatric features from user's dialog to detect changes in daily setting? 
+
 ## Project Goals
-```
-1) Build classification model 
 
-2) Expand/validate dataset using external sources
+1) Build feature classification model
 
-```
+2) Expand dataset using external sources and validate with current model
+
+## Project Process
+
+Data collection - Data preprocessing - Model Building - Model testing - Expand dataset - Validate dataset
+
 ## Data Collecting
 
 Data set is from AI Hub(Open data platform) <http://www.aihub.or.kr/keti_data_board/language_intelligence>.<br>
 To be specific, data from "recognition-language intelligence" section is considered as promising candidate for the project.<br>
 <br>
 Among various datasets, below dataset were seemed to fit the project objective.<br>
+```
 "웰니스 대화 스크립트 데이터셋", "한국어 대화 데이터셋", "트위터 기반 일상 대화 데이터셋", "대화형 한글 에이전트 데이터셋", "한국어 감정정보 연속/단발 대화 데이터셋", "인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋"
-
+```
 Specific descriptions and potential use in current project is as following.
 
-##### 웰니스 대화 스크립트 데이터셋
+##### Wellness dialog script dataset
 ```
-웰니스 대화 스크립트 데이터셋 --> 라벨된 정신건강 주제 이야기
-정신건강 상담 주제의 359개 대화의도에 대한 5,232개의 사용자 발화 및 1,023개의 챗봇 발화 구축
+Korean title: 웰니스 대화 스크립트 데이터셋
+Description: Labeled dialog about psychiatric topics
+5,232 User dialog with 1,023 chatbot response about 359 different mental health counseling topics
 ```
-##### 한국어대화/트위터 기반 일상대화/대화형 한글 에이전트
+##### Korean dialog / Twitter based daily dialog / Conversational Korean agent dataset
 ```
-한국어대화/트위터 기반 일상대화/대화형 한글 에이전트 --> 일상적인 대화
-748개의 멀티턴 대화셋, 단발성으로 4,975 문장 존재
-1차년도: 1~17turn  2,000 Set
-8,000 dialouge  set(각 dialougue별 2~10개의 대화 묶음)
+Korean title: 한국어대화/트위터 기반 일상대화/대화형 한글 에이전트
+Description: 3 different datasets about daily dataset 
+3 datasets are composed of daily dialogs.
+1) Korean dialog - 748 continuous dialog(4,975 singular dialog)
+2) Twitter based daily dialog - 2,000 continuous dialog(Tweets)
+3) Conversational Korean agent dataset - 8,000 continuous dialog // From drama&scenario scripts
 ```
-##### 한국어감정정보 연속/단발성 대화셋 
+##### Korean emotion-labeled continuous/singular dialog dataset
 ```
---> 문장+감정정보
-연속적  10,000개 대화 (단발성 55,627문장)
-총 데이터 개수: 38,594 문장
+Korean title: 한국어감정정보 연속/단발성 대화셋 
+Description: Consist of dialog sentence and emotion label of the sentence
+Continuous dialog set - 10,000 dialog(55,627 singular dialog)
+Singular dialog set - 38,594 dialog
 ```
-##### 인공지능 윤리연구를위한 비정형 텍스트 데이터셋
+##### Unstructured text dataset for AI ethics study
 ```
---> 윤리/비윤리 데이터말뭉치 구축
-1차년도: 뉴스기사 댓글 7,000만 건, 트위터 3,000만 건
-2차년도: 온라인커뮤니티 (일베저장소) 댓글4,500만건
-3차년도: 온라인커뮤니티 (일베저장소) 댓글2,000만건
+Korean title: 인공지능 윤리연구를위한 비정형 텍스트 데이터셋
+Description: Corpus about ethical/unethical contents collected via online 
+1) Online News 70 million comments / Twitter 30 million tweets
+2) Online community 45 million comments(Labeled unethical)
+3) Online community 20 million comments(Labeled unethical)
 ```
 
