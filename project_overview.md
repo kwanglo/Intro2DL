@@ -9,7 +9,7 @@ Detecting/Classifying psychiatric features in daily dialog settings
 Primary research tool in psychology and psychiatry researches are quantitative methods like questionnaires.
 Still, qualitative research is essential when studying psychological or psychiatric features. Unfortunately, qualitative research requires great amount of time and resources in its process and analysis. Especially in counseling, although initial criteria is set according to first visit questionnaire, qualitative analysis based on counseling results holds the most critical portion.
 
-As the advance of NLP technology, multi-sentiment analysis from daily dialog became possible. If so, what if we can derive psychiatric features from user's dialog to detect changes in daily setting? 
+As the advance of NLP technology, multi-sentiment analysis from daily dialog became possible. If so, what if we can derive psychiatric features from user's dialog to detect changes without researcher's hands-on labeling? 
 
 ## Project Goals
 
