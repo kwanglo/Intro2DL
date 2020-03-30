@@ -71,9 +71,9 @@ The target/labeled data for the project contains 5,232 sentences with 359 topics
 Still, ordinary dialog set contains 109,196 dialog even without the last 165 million comments dataset.<br>
 Thus, target data is about 4.8% of ordinary dialog set, meaning great imbalance in data. <br>
 <br>
-To solve this problem, related reference was selected for citation.
-Title : "Dealing with “rare” events in Machine Learning" by Deepa Mahidhara, May 2, 2019
-<a> https://medium.com/@dmahidhara/dealing-with-rare-events-in-machine-learning-14c2c167e222
+To solve this problem, related reference was selected for citation.<br>
+Title : "Dealing with “rare” events in Machine Learning" by Deepa Mahidhara, May 2, 2019<br>
+<a> https://medium.com/@dmahidhara/dealing-with-rare-events-in-machine-learning-14c2c167e222 <br>
 In above, reference, ROC AUC score was used instead of accuracy to minimize FP.<br>
 In addition, boosting(Gradient boosting) and oversampling(SMOTE, Synthetic Minority Over-Sampling Technique) were used to fix imbalance issue. Similar techniques will be considered in future progress after more detailed research.
 <br>
