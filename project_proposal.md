@@ -1,4 +1,4 @@
-*Note: This document is still on-going! Last update --2020/03/24 22:30*
+*Note: This document is still on-going! Last update --2020/03/30 18:30*
 
 # Project Objective
 
@@ -13,13 +13,15 @@ As the advance of NLP technology, multi-sentiment analysis from daily dialog bec
 
 ## Project Goals
 
-1) Build feature classification model
+Main goal: Build psychiatric feature classification model
 
-2) Expand dataset using external sources and validate with current model
+Sub goal: Expand dataset using external sources and validate with current model
 
 ## Project Process
-
-Data collection - Data preprocessing - Model Building - Model testing - Expand dataset - Validate dataset
+```
+Data collection - Data preprocessing - Model Building - Model testing (- Expand dataset - Validate dataset)
+```
+Primary goal of the project is to finish up to  model testing. 
 
 ## Data Collecting
 
@@ -63,3 +65,8 @@ Description: Corpus about ethical/unethical contents collected via online
 3) Online community 20 million comments(Labeled unethical)
 ```
 
+## Data Preprocessing
+
+## Model Building
+
+## Model testing
