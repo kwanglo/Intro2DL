@@ -80,9 +80,9 @@ In addition, boosting(Gradient boosting) and oversampling(SMOTE, Synthetic Minor
 
 ## Model Building
 
-Possible algorithms for basic comparison with machine learning are: Naive Bayes, Logistic regression, SVM<br>
+Possible machine learning techniques for basic comparisons are: **Naive Bayes**, **Logistic regression**, **SVM**<br>
 This three models are widely adapted in various classification and also used in simple NLP classifications like Ham/Spam filters.<br>
 
 ## Model testing
 
-Potential test metric is thought to be **F-measure** and **ROC AUC score** according to the reference.
+Test metrics for the project are **F-measure** and **ROC AUC score** from the classification results according to the reference.
