@@ -1,4 +1,4 @@
-*This document is depreciated. New proposal is being prepared.*<br>
+*This document is depreciated. New proposal is being prepared.* --2020/04/01 - its not April fool's joke!<br>
 *Note: This document is still on-going! Last update --2020/03/30 18:30*
 
 # Project Objective
