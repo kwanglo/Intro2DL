@@ -1,7 +1,10 @@
 *Note: This document is still on-going! Last update --2020/04/01 13:30*
 
 # Project Objective
-### Short Summary of previous proposal
+
+Classifying the underlying intent and sentiment of daily dialog(and provide appropriate response).
+
+##### Short Summary of previous proposal
 
 Previously, "Detecting/Classifying psychiatric features in daily dialog settings" was set as the project goal.
 However, when reviewing the data contents, the labeled(taget) data was consist of too many classes with small data volume. 
