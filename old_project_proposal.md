@@ -1,3 +1,4 @@
+*This document is depreciated. New proposal is being prepared.*
 *Note: This document is still on-going! Last update --2020/03/30 18:30*
 
 # Project Objective
