@@ -42,7 +42,7 @@ To be specific, data from "recognition-language intelligence" section is conside
 <br>
 Among various datasets, below dataset were seemed to fit the project objective.<br>
 ```
-"웰니스 대화 스크립트 데이터셋", "한국어 대화 데이터셋", "트위터 기반 일상 대화 데이터셋", "대화형 한글 에이전트 데이터셋", "한국어 감정정보 연속/단발 대화 데이터셋", "인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋"
+"웰니스 대화 스크립트 데이터셋", "한국어 대화 데이터셋", "트위터 기반 일상 대화 데이터셋", "대화형 한글 에이전트 데이터셋", "한국어 감정정보 연속/단발 대화 데이터셋", "VRM 화행 ","인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋"
 ```
 Specific descriptions and potential use in current project is as following.
 
@@ -65,14 +65,14 @@ Description: 3 different datasets about daily dataset
 ```
 Korean title: VRM 화행 데이터
 Description: Classified into 8 different intent of dialog.
-Continuous dialog set - 10,000 dialog(55,627 singular dialog)
-Singular dialog set - 38,594 dialog
+100,000 singular dialog with VRM labels. 
 ```
 ##### Korean emotion-labeled continuous/singular dialog dataset
 ```
 Korean title: 한국어감정정보 연속/단발성 대화셋 
-Description: Consist of dialog sentence and emotion label of the sentence<br>
-100,000 singular dialog with VRM labels. 
+Description: Consist of dialog sentence and emotion label of the sentence
+Continuous dialog set - 10,000 dialog(55,627 singular dialog)
+Singular dialog set - 38,594 dialog
 ```
 Specific classification criteria of intent is as in below table.
 |경험의 원천	|경험에 대한 추정|인용프레임 (타인)|인용프레임 (화자)|
@@ -84,10 +84,18 @@ Specific classification criteria of intent is as in below table.
 
 ## Data Preprocessing
 
+Initial dataset for model training has similar data size(VRM: about 100,000 / Korean dialog: about 95,000).<br>
+
+
+Data will go through ordinal NLP preprocessing procedures such as regular expression handling, tokenization, stopwords removal, stemming and etc. Specific preprocessing procedure will be updated afterwards.
+
 ## Model Building
 
 Possible machine learning techniques for basic comparisons are: **Naive Bayes**, **Logistic regression**, **SVM**<br>
 This three models are widely adapted in various classification and also used in simple NLP classifications like Ham/Spam filters.<br>
+
+Initial datasets used in model building are 'VRM dialog' and 'Korean emotion-labeled continuous/singular dialog'.<br>
+Each dataset will be used in building different(intend/sentiment) models.<br>
 
 ## Model Testing
 
