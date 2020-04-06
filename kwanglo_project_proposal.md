@@ -1,4 +1,4 @@
-*Note: This document is still on-going! Last update --2020/04/01 13:30*
+*Note: This document is still on-going! Last update --2020/04/06 17:30*
 
 # Project Objective
 
@@ -93,9 +93,17 @@ Data will go through ordinal NLP preprocessing procedures such as regular expres
 
 Possible machine learning techniques for basic comparisons are: **Naive Bayes**, **Logistic regression**, **SVM**<br>
 This three models are widely adapted in various classification and also used in simple NLP classifications like Ham/Spam filters.<br>
-
+In addition, classification methods like **Decision Tree** and, **Random Forest** can be also implemented.<br>
+<br>
 Initial datasets used in model building are 'VRM dialog' and 'Korean emotion-labeled continuous/singular dialog'.<br>
 Each dataset will be used in building different(intend/sentiment) models.<br>
 
 ## Model Testing
+
+When evaluating final model, critical criteria will be **Accuracy** and,**F1-score**.<br>
+Since the goal of current classification model is multi-labeled, it is important to choose a balanced metric.<br>
+There may be changes in chosen metrics according to unknown details of each speech intents.<br>
+<br>
+In addition, learning steps and time will be also measured regarding maximum daily running limit of Google colab.<br>
+Any model that requires more then 12hrs in learning will be depreciated.<br>
 
