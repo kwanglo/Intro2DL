@@ -1,4 +1,4 @@
-*Note: This document is still on-going! Last update --2020/04/08 19:00*
+*Note: This document is still on-going! Last update --2020/04/08 22:30*
 
 # Project Objective
 
@@ -49,7 +49,7 @@ Datasets are classified into 3 categories.
 2) Dataset for training/testing sentiment classification model
 3) Dataset for possible extention of dataset
 
-##### 1) 3i5K - Intonation-aided intention identification for Korean
+##### 1) 3i4K - Intonation-aided intention identification for Korean
 ```
 Korean title: 한국어 의도파악 데이터셋
 Description: 61,255 words & sentences with intent labels
@@ -61,7 +61,10 @@ Data consist of 2 columns.
 Intent labels are consist of 7 different labels: <br>
 Fragments(FR) - 6009 / Statements(S) - 18300 / Questions(Q) - 17869 / Commands(C) - 12968 /<br> 
 Rhetorical questions(RQ) - 1745 / Rhetorical commands(RC) - 1087 / Intonation-dependent utterances(IU) - 3277<br>
-Numbers after - are number of sentences labeled as each class. Since there are imbalance between each classes, some classes might show low accuracy at the results. 
+<br>
+Numbers after - are number of sentences labeled as each class. <br>
+Since there are imbalance between each classes, some classes might show low accuracy at the results. <br>
+Dropping such classes or finding alternative ways to boost the dataset will be used to enhance overall performance.
 
 ##### 2) Korean emotion-labeled singular dialog dataset
 ```
@@ -73,7 +76,7 @@ Data consist of 2 columns.
 - Emotion Label
 
 Emotion label consist 7 different classes: 중립(4830), 공포(5468), 놀람(5665), 분노(5665), 슬픔(5267), 행복(6037), 혐오(5429)<br>
-Number in () are number of sentences labeled as each class. There seem to be no extreme skewness in class distribution.
+Number in () are number of sentences labeled as each class. Data seems to be balanced.
 
 ##### 3-1) Twitter based daily divalog
 ```
@@ -81,7 +84,6 @@ Korean title: 트위터 기반 일상대화/대화형 한글 에이전트
 Description: Twitter based daily dialog - 2,000 continuous dialog(Tweets)
 ```
 Data consist of multiple columns which each columns represent a single tweet and each row represents one multi-sentence dialog.<br>
-<br>
 
 ##### 3-2) Wellness dialog script dataset
 ```
@@ -117,7 +119,7 @@ This three models are widely adapted in various classification and also used in 
 In addition, classification methods like **Decision Tree** and, **Random Forest** can be also implemented.<br>
 <br>
 Initial deep learning algorithms that will be tested are **CNN**, **RNN(Bi-LSTM)**.<br>
-Since there are many pre-trained models in RNN, varous models using concepts like **Seq2Seq**, **Attention** will be implemented.<br>
+Since there are many pre-trained models using RNN, varous models using concepts like **Seq2Seq**, **Attention**, **Transformer** will be implemented.
 <br>
 In semi-supervised learning part, various methods from previous researches like **self-training**, **multi-view learning**, **self-ensembling** will be adapted.
 
@@ -125,7 +127,12 @@ In semi-supervised learning part, various methods from previous researches like 
 
 When evaluating final model, critical criteria will be **Accuracy** and,**F1-score**.<br>
 <br>
-
+For primary goal(classification of sentiment and intent), accuracy and F1-score will be measure for each class.<br>
+Since we are building two seperated model for classification and intent, initial evaluation will be conducted seperately.<br>
+After validating two models, cross-classification of each dataset(1,2) will be done using the other classification model.<br>
+<br>
+In extension phase, semi-supervised learning methods will be applied to label dataset 3-1 and 3-2.<br>
+In this phase, 3 different confusion matrix(only intent, only sentiment and both) will be compared to test accuracy and F1-score.
 <br>
 In addition, learning steps and time will be also measured regarding maximum daily running limit of Google colab.<br>
 Any model that requires more then 12hrs in learning will be depreciated.<br>
