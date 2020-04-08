@@ -61,7 +61,7 @@ Intent labels are consist of 7 different labels: <br>
 Fragments(FR) - 6009 / Statements(S) - 18300 / Questions(Q) - 17869 / Commands(C) - 12968 /<br> 
 Rhetorical questions(RQ) - 1745 / Rhetorical commands(RC) - 1087 / Intonation-dependent utterances(IU) - 3277<br>
 <br>
-Numbers after - are number of sentences labeled as each class. <br>
+Numbers after "-" are number of sentences labeled as each class. <br>
 Since there are imbalance between each classes, some classes might show low accuracy at the results. <br>
 Dropping such classes or finding alternative ways to boost the dataset will be used to enhance overall performance.
 
@@ -75,7 +75,7 @@ Data consist of 2 columns.
 - Emotion Label
 
 Emotion label consist 7 different classes: 중립(4830), 공포(5468), 놀람(5665), 분노(5665), 슬픔(5267), 행복(6037), 혐오(5429)<br>
-Number in () are number of sentences labeled as each class. Data seems to be balanced.
+Number in "()" are number of sentences labeled as each class. Data seems to be balanced.
 
 ##### 3-1) Twitter based daily divalog
 ```
