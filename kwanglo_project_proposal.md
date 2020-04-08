@@ -1,4 +1,4 @@
-*Note: This document is still on-going! Last update --2020/04/06 17:30*
+*Note: This document is still on-going! Last update --2020/04/08 18:30*
 
 # Project Objective
 
@@ -37,50 +37,42 @@ Primary goal of the project is to finish up to  model testing.
 
 ## Data Collection
 
-Data set is from AI Hub(Open data platform) <http://www.aihub.or.kr/keti_data_board/language_intelligence>.<br>
-To be specific, data from "recognition-language intelligence" section is considered as promising candidate for the project.<br>
-<br>
-Among various datasets, below dataset were seemed to fit the project objective.<br>
-```
-"웰니스 대화 스크립트 데이터셋", "한국어 대화 데이터셋", "트위터 기반 일상 대화 데이터셋", "대화형 한글 에이전트 데이터셋", "한국어 감정정보 연속/단발 대화 데이터셋", "VRM 화행 ","인공지능 윤리 연구를 위한 비정형 텍스트 데이터셋"
-```
-Specific descriptions and potential use in current project is as following.
+### Data source
+- AI Hub(Open data platform) <http://www.aihub.or.kr/keti_data_board/language_intelligence> <br>
+- Intonation-aided intention identification for Korean <https://github.com/warnikchow/3i4k> <br>
 
-##### Wellness dialog script dataset
+### Data description
+
+Datasets are classified into 3 categories.
+1) Dataset for training/testing intent classification model
+2) Dataset for training/testing sentiment classification model
+3) Dataset for possible extention of dataset
+
+##### 1) 3i5K - Intonation-aided intention identification for Korean
+```
+Korean title: 한국어 의도파악 데이터셋
+Description: 61,255 words & sentences with intent labels
+```
+##### 2) Korean emotion-labeled singular dialog dataset
+```
+Korean title: 한국어감정정보 단발성 대화셋 
+Description: Consist of dialog sentence and emotion label of the sentence - 38,594 dialog
+```
+This dataset will be used for building 
+
+##### 3-1) Twitter based daily divalog
+```
+Korean title: 트위터 기반 일상대화/대화형 한글 에이전트
+Description: Twitter based daily dialog - 2,000 continuous dialog(Tweets)
+```
+
+##### 3-2) Wellness dialog script dataset
 ```
 Korean title: 웰니스 대화 스크립트 데이터셋
 Description: Labeled dialog about psychiatric topics
 5,232 User dialog with 1,023 chatbot response about 359 different mental health counseling topics
 ```
-##### Korean dialog / Twitter based daily dialog / Conversational Korean agent dataset
-```
-Korean title: 한국어대화/트위터 기반 일상대화/대화형 한글 에이전트
-Description: 3 different datasets about daily dataset 
-3 datasets are composed of daily dialogs.
-1) Korean dialog - 748 continuous dialog(4,975 singular dialog)
-2) Twitter based daily dialog - 2,000 continuous dialog(Tweets)
-3) Conversational Korean agent dataset - 8,000 continuous dialog // From drama&scenario scripts
-```
-##### VRM(Verbal Response Mode) Dialog dataset
-```
-Korean title: VRM 화행 데이터
-Description: Classified into 8 different intent of dialog.
-100,000 singular dialog with VRM labels. 
-```
-##### Korean emotion-labeled continuous/singular dialog dataset
-```
-Korean title: 한국어감정정보 연속/단발성 대화셋 
-Description: Consist of dialog sentence and emotion label of the sentence
-Continuous dialog set - 10,000 dialog(55,627 singular dialog)
-Singular dialog set - 38,594 dialog
-```
-Specific classification criteria of intent is as in below table.
-|경험의 원천	|경험에 대한 추정|인용프레임 (타인)|인용프레임 (화자)|
-|------|---|---|---|
-|타인|타인|Reflection(R)|Interpretation(I)|
-|타인|화자|Acknowledgment(K)|Question(Q)|
-|화자|타인|Confirmation(C)|Advisement(A)|
-|화자|화자|Education(E)|Disclosure(D)|
+This data 
 
 ## Data Preprocessing
 
@@ -95,7 +87,7 @@ Possible machine learning techniques for basic comparisons are: **Naive Bayes**,
 This three models are widely adapted in various classification and also used in simple NLP classifications like Ham/Spam filters.<br>
 In addition, classification methods like **Decision Tree** and, **Random Forest** can be also implemented.<br>
 <br>
-Initial datasets used in model building are 'VRM dialog' and 'Korean emotion-labeled continuous/singular dialog'.<br>
+Initial datasets used in model building are 'VRM dialog' and 'Korean emotion-labeled singular dialog'.<br>
 Each dataset will be used in building different(intend/sentiment) models.<br>
 
 ## Model Testing
