@@ -25,8 +25,7 @@ underlying the daily log and present the results to its stakeholders.
 
 ## Project Goals
 
-Main goal: Classification of speech intent and sentiment of dialog(input)
-
+Main goal: Classification of speech intent and sentiment of dialog
 Sub goal: Extend data labels using semi-supervised learning
 
 ## Project Process
