@@ -109,7 +109,7 @@ Initial datasets used in model building are '3i4k intent set' and 'Korean emotio
 Each dataset will be used in building different(intend/sentiment) models.<br>
 <br>
 Various embedding models will be tested in advance to enhance the performance of the models.<br>
-Both word embedding and sentence embedding methods will be tested.<br>
+Both word embedding and sentence embedding methods will be tested. Considered embedding methods for the projects are:<br>
 Word Embedding: Word2Vec, FastText, Glove, Swivel<br>
 Sentence Embedding: ELMo, KorBERT(Korean-ver BERT provided by ETRI)<br>
 <br>
@@ -118,7 +118,7 @@ This three models are widely adapted in various classification and also used in 
 In addition, classification methods like **Decision Tree** and, **Random Forest** can be also implemented.<br>
 <br>
 Initial deep learning algorithms that will be tested are **CNN**, **RNN(Bi-LSTM)**.<br>
-Since there are many pre-trained models using RNN, varous models using concepts like **Seq2Seq**, **Attention**, **Transformer** will be implemented.
+Since there are many pre-trained models using RNN, varous models using concepts like **Seq2Seq**, **Attention**, **Transformer** will be implemented.<br>
 <br>
 In semi-supervised learning part, various methods from previous researches like **self-training**, **multi-view learning**, **self-ensembling** will be adapted.
 
