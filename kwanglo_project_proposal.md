@@ -1,8 +1,8 @@
-*Note: This document is still on-going! Last update --2020/04/08 18:30*
+*Note: This document is still on-going! Last update --2020/04/08 19:00*
 
 # Project Objective
 
-Classifying the underlying intent and sentiment of daily dialog(and provide appropriate response).
+Classifying the underlying intent and sentiment of daily dialog.
 
 ##### Short Summary of previous proposal
 
@@ -27,13 +27,14 @@ underlying the daily log and present the results to its stakeholders.
 
 Main goal: Classification of speech intent and sentiment of dialog(input)
 
-Sub goal: Generation of following response dialog(output) / Extend to psychiatric context dialogs
+Sub goal: Extend data labels using semi-supervised learning
 
 ## Project Process
 ```
-Data collection - Data preprocessing - Model Building - Model testing (- Build response model - Extend model)
+Data collection - Data preprocessing - Model Building - Model testing (- Extend using semi-supervised learning)
 ```
-Primary goal of the project is to finish up to  model testing. 
+Primary goal of the project is to finish up to  model testing.<br>
+After that, semi-supervised learning methods will be applied to extend dataset.<br>
 
 ## Data Collection
 
@@ -53,18 +54,34 @@ Datasets are classified into 3 categories.
 Korean title: 한국어 의도파악 데이터셋
 Description: 61,255 words & sentences with intent labels
 ```
+Data consist of 2 columns.
+- Intent label
+- Word/Sentence
+
+Intent labels are consist of 7 different labels: <br>
+Fragments(FR) - 6009 / Statements(S) - 18300 / Questions(Q) - 17869 / Commands(C) - 12968 /<br> 
+Rhetorical questions(RQ) - 1745 / Rhetorical commands(RC) - 1087 / Intonation-dependent utterances(IU) - 3277<br>
+Numbers after - are number of sentences labeled as each class. Since there are imbalance between each classes, some classes might show low accuracy at the results. 
+
 ##### 2) Korean emotion-labeled singular dialog dataset
 ```
 Korean title: 한국어감정정보 단발성 대화셋 
 Description: Consist of dialog sentence and emotion label of the sentence - 38,594 dialog
 ```
-This dataset will be used for building 
+Data consist of 2 columns.
+- Sentence
+- Emotion Label
+
+Emotion label consist 7 different classes: 중립(4830), 공포(5468), 놀람(5665), 분노(5665), 슬픔(5267), 행복(6037), 혐오(5429)<br>
+Number in () are number of sentences labeled as each class. There seem to be no extreme skewness in class distribution.
 
 ##### 3-1) Twitter based daily divalog
 ```
 Korean title: 트위터 기반 일상대화/대화형 한글 에이전트
 Description: Twitter based daily dialog - 2,000 continuous dialog(Tweets)
 ```
+Data consist of multiple columns which each columns represent a single tweet and each row represents one multi-sentence dialog.<br>
+<br>
 
 ##### 3-2) Wellness dialog script dataset
 ```
@@ -72,29 +89,43 @@ Korean title: 웰니스 대화 스크립트 데이터셋
 Description: Labeled dialog about psychiatric topics
 5,232 User dialog with 1,023 chatbot response about 359 different mental health counseling topics
 ```
-This data 
+Data consist of 3 columns.
+- Mental Disorder Classification Label
+- User Input
+- Chatbot Response
 
 ## Data Preprocessing
-
-Initial dataset for model training has similar data size(VRM: about 100,000 / Korean dialog: about 95,000).<br>
-
-
-Data will go through ordinal NLP preprocessing procedures such as regular expression handling, tokenization, stopwords removal, stemming and etc. Specific preprocessing procedure will be updated afterwards.
+Both datasets for initial model building(data1, 2) only have 2 columns with text and labels.<br>
+Thus, basic preprocessing procedure before using embedding models will be:
+- Null-value check/handling
+- Regularizing / Tokenizing&Stemming / Removing stop-words(Using existing libraries like KoNLPy, SoyNLP, etc)
+<br>
+Since initial goal of the project is to classify intent and sentiment of given sentence, we do not need multi-sentence classification and response label. As for data 3-1, seperating each column into indiviudal row is required since we are not interested in multi-sentence dialoge issue. As for data 3-2, dropping chatbot response and classification label are required for future use.
 
 ## Model Building
 
+Initial datasets used in model building are '3i4k intent set' and 'Korean emotion-labeled singular dialog'.<br>
+Each dataset will be used in building different(intend/sentiment) models.<br>
+<br>
+Various embedding models will be tested in advance to enhance the performance of the models.<br>
+Both word embedding and sentence embedding methods will be tested.<br>
+Word Embedding: Word2Vec, FastText, Glove, Swivel<br>
+Sentence Embedding: ELMo, KorBERT(Korean-ver BERT provided by ETRI)<br>
+<br>
 Possible machine learning techniques for basic comparisons are: **Naive Bayes**, **Logistic regression**, **SVM**<br>
 This three models are widely adapted in various classification and also used in simple NLP classifications like Ham/Spam filters.<br>
 In addition, classification methods like **Decision Tree** and, **Random Forest** can be also implemented.<br>
 <br>
-Initial datasets used in model building are 'VRM dialog' and 'Korean emotion-labeled singular dialog'.<br>
-Each dataset will be used in building different(intend/sentiment) models.<br>
+Initial deep learning algorithms that will be tested are **CNN**, **RNN(Bi-LSTM)**.<br>
+Since there are many pre-trained models in RNN, varous models using concepts like **Seq2Seq**, **Attention** will be implemented.<br>
+<br>
+In semi-supervised learning part, various methods from previous researches like **self-training**, **multi-view learning**, **self-ensembling** will be adapted.
 
 ## Model Testing
 
 When evaluating final model, critical criteria will be **Accuracy** and,**F1-score**.<br>
-Since the goal of current classification model is multi-labeled, it is important to choose a balanced metric.<br>
-There may be changes in chosen metrics according to unknown details of each speech intents.<br>
+<br>
+
 <br>
 In addition, learning steps and time will be also measured regarding maximum daily running limit of Google colab.<br>
 Any model that requires more then 12hrs in learning will be depreciated.<br>
