@@ -1,5 +1,9 @@
 # References
+Great tutorial to follow!<br>
 <a>https://github.com/bentrevett/pytorch-sentiment-analysis <br>
+For solving Type error: '<'<br>
+<a>https://github.com/pytorch/text/issues/474<br>
+<br>
 <a>https://towardsdatascience.com/sentiment-analysis-using-lstm-step-by-step-50d074f09948 <br>
 <a>https://medium.com/@bhadreshpsavani/tutorial-on-sentimental-analysis-using-pytorch-b1431306a2d7<br>
 <a>https://www.kaggle.com/columbine/pytorch-sentiment-analysis<br>
