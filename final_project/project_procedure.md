@@ -10,6 +10,14 @@ For solving Type error: '<'<br>
 <a>https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html<br>
 <a>https://pytorch.org/tutorials/beginner/text_sentiment_ngrams_tutorial.html<br>
 
+# NLP tutorials using Pytorch
+<a>https://zzsza.github.io/data/2018/03/10/nlp-python/ <br>
+<a>https://wikidocs.net/60691 <br>
+<a>https://wikidocs.net/66115 <br>
+
+## Naver movie review analysis using hugging face BERT(multilingual model)
+<a>https://colab.research.google.com/drive/1tIf0Ugdqg4qT7gcxia3tL7und64Rv1dP#scrollTo=ZQezr0tljJlM
+ 
 # Preprocessing
 
 
