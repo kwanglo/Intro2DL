@@ -1,5 +1,3 @@
-*Note: This document is still on-going! Last update --2020/04/08 22:30*
-
 # Project Objective
 
 Classifying the underlying intent and sentiment of daily dialog.
